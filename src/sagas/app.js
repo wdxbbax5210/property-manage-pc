@@ -16,8 +16,26 @@ const uploadRecordCommonMethods = function*() {
     }
   });
 };
+const checkLogin = function*() {
+  yield callTakeLatest(Act.CHECK_LOGIN, function*(action) {
+    console.log("测试哈哈哈")
+  })
+};
+// 项目启动配置基础设置
+let start = function*() {
+  // if (!__LOCAL__) {
+    // 特殊处理 如果是login页面，则走login的js鉴权+免登 否则走这里的dd_config
+    if (location.href.indexOf('#/login') < 0) {
+      yield put({
+        type: Act.CHECK_LOGIN
+      });
+    }
+  // }
+};
 export default function* rootSaga() {
   yield [
-      uploadRecordCommonMethods()
+      uploadRecordCommonMethods(),
+      start(),
+      checkLogin()
     ]
 }

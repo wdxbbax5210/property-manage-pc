@@ -31,9 +31,10 @@ _corpId ? window.localStorage.setItem('corpId', _corpId) : null;
 import LeftNav from './components/common/leftnav';
 class App extends React.Component {
     render() {
-        let path = this.props.location.pathname;
-        // console.log(path);
-        if(path.includes('slidePanel')){ //此处约定 router中包含slidePanel的是通过JSAPI打开的钉钉右侧panel
+        let pathname = this.props.location.pathname;
+      const includesRouter = pathname.includes('login') || pathname.includes('slidePanel') || pathname.includes('noleft');
+      // console.log(path);
+        if(includesRouter){ //此处约定 router中包含slidePanel的是通过JSAPI打开的钉钉右侧panel
             return (
                 <div className="main t-FBH">
                     {this.props.children}

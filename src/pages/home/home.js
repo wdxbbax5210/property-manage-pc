@@ -4,6 +4,7 @@ require('./home.styl');
 
 import { Input } from 'antd';
 import Import from 'components/import/Import';
+import Login from '../login/Login';
 
 class Home extends React.Component {
 
@@ -18,6 +19,7 @@ class Home extends React.Component {
             <div className="home">
                 <div className="header">首页</div>
                 <Import type="manage"/>
+                <Login/>
             </div>
         );
     }

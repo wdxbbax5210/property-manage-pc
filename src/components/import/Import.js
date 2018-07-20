@@ -14,7 +14,7 @@ const dataList = {
     uploadExcelUrl: '/fee/record/upload/excel', //批量导入
     downloadErrorUrl: '/fee/record/upload/error'  //下载错误记录 https://229492634.miss-xia-property-manage.club
 	}
-}
+};
 
 class Import extends React.Component {
 
