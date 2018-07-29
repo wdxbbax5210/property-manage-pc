@@ -59,7 +59,7 @@ class Login extends React.Component {
                 )}
               </FormItem>
             </Form>
-            <Button type="primary" className="confirm" onClick={this.handleSubmit}>登录/注册</Button>
+            <Button type="primary" className="confirm" onClick={this.handleSubmit}>登录</Button>
           </div>
           
         </div>
