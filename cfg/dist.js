@@ -12,7 +12,7 @@ let BowerWebpackPlugin = require('bower-webpack-plugin');
 let config = Object.assign({}, baseConfig, {
   entry: path.join(__dirname, '../src/index'),
   output: {
-    path: path.join(__dirname, '../../crm-release/pc/assets'),
+    path: path.join(__dirname, '../../property-manage-release/pc/assets'),
     filename: 'app.js',
     publicPath: defaultSettings.publicPath
   },
@@ -26,7 +26,7 @@ let config = Object.assign({}, baseConfig, {
     new BowerWebpackPlugin({
       searchResolveModulesDirectories: false
     }),
-    // new webpack.optimize.UglifyJsPlugin(), //压缩代码
+    new webpack.optimize.UglifyJsPlugin(), //压缩代码
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin()

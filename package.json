@@ -10,6 +10,8 @@
     "url": ""
   },
   "scripts": {
+    "build": "npm run buildcopy & webpack --env=dist",
+    "buildcopy": "copyfiles -f ./src/index.html ./src/favicon.ico ../property-manage-release/pc/",
     "start": "node server.js --env=dev",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
