@@ -20,6 +20,7 @@ class Home extends React.Component {
                 <div className="header">首页</div>
                 <Import type="manage"/>
                 <Login/>
+								<div className="number" onClick={()=>{window.open('http://www.beian.miit.gov.cn/')}}>沪ICP备18028154号-1</div>
             </div>
         );
     }
